@@ -8,3 +8,10 @@ body {
 .achieve{
     color:#7703F0;
 }
+.foot{
+    background-color:green;
+}
+.head{
+    background-color:blue;
+    font-size:34px;
+}
