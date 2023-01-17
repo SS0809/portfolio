@@ -1,22 +1,21 @@
-body {
-    background-color:black;
-    color:white;
+body 
+{
+  background-color : lightblue;
+  color: white;
 }
-.portfolio{
-    color:#7703F0;
+.link
+{
+  border: 2px solid grey;
+  border-radius: 25px;
+  background-color: black;
 }
-.achieve{
-    color:#7703F0;
+.icoo
+{
+  border-left: 30px solid transparent ;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
-.foot{
-    background-color:green;
-}
-.head{
-    background-color:blue;
-    font-size:20px;
-}
-.data{
-    background-color:grey;
-    height:20em;
-    width:20em;
+.a
+{
+  color: transparent;
 }
