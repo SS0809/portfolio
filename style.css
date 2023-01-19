@@ -3,6 +3,10 @@ body
   background-color : lightblue;
   color: white;
 }
+.heading
+{
+  color : black;
+}
 .link
 {
   border: 2px solid grey;
@@ -13,9 +17,20 @@ body
 {
   border-left: 30px solid transparent ;
   border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-bottom: 18px solid transparent;
 }
 .a
 {
   color: transparent;
+}
+.abtme
+{
+  background-color: black;
+  border: 2px ;
+  border-radius: 25px;
+  height :60%;
+}
+.content
+{
+  border-left: 10px solid transparent;
 }
