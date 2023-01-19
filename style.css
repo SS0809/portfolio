@@ -1,27 +1,37 @@
 body 
 {
   background-color : lightblue;
-  color: white;
+  color: crimson;
+  font-family: 'ubuntu';
 }
-.heading
+.navbar{
+   background-color: black;
+   font-size: 45;
+   width: 100%;
+}
+.navbarlogo
 {
-  color : black;
+   margin: 20px;
 }
 .link
 {
-  border: 2px solid grey;
+  margin-top: 20px;
   border-radius: 25px;
   background-color: black;
+  border: 15px solid transparent;
+}
+.topic
+{
+  margin: 10px;
 }
 .icoo
 {
-  border-left: 30px solid transparent ;
-  border-top: 10px solid transparent;
-  border-bottom: 18px solid transparent;
+  border: 15px solid transparent;
 }
 .a
 {
   color: transparent;
+  border: 10px;
 }
 .abtme
 {
@@ -33,4 +43,5 @@ body
 .content
 {
   border-left: 10px solid transparent;
+  color: white;
 }
