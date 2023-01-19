@@ -1,12 +1,12 @@
 body 
 {
-  background-color : lightblue;
+  background-color : black;
   color: crimson;
-  font-family: 'ubuntu';
+  font-family: 'ubuntu' ;
 }
 .navbar{
    background-color: black;
-   font-size: 45;
+   font-size: 48;
    width: 100%;
 }
 .navbarlogo
@@ -17,7 +17,7 @@ body
 {
   margin-top: 20px;
   border-radius: 25px;
-  background-color: black;
+  background-color: #f2d2f7 ;
   border: 15px solid transparent;
 }
 .topic
@@ -43,5 +43,5 @@ body
 .content
 {
   border-left: 10px solid transparent;
-  color: white;
+  color: black;
 }
