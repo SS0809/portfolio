@@ -44,12 +44,17 @@ body
 {
   border-left: 10px solid transparent;
   color: black;
-   width: 320px;
+  width: auto; 
 }
-.child {
+.child1 {
+  display: inline-block;
+  margin: 10px;
+  width: auto;
+}
+.child2 {
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
+  width: 60%;
 }
 .imgg
 {
