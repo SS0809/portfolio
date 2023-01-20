@@ -38,10 +38,20 @@ body
   background-color: black;
   border: 2px ;
   border-radius: 25px;
-  height :60%;
+  height :80%;
 }
 .content
 {
   border-left: 10px solid transparent;
   color: black;
+   width: 320px;
+}
+.child {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+.imgg
+{
+  border-radius: 25px;
 }
