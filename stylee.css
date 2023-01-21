@@ -12,304 +12,53 @@ body
 .navbarlogo
 {
    margin: 20px;
-}
-.link
-{
-  margin-top: 20px;
-  border-radius: 25px;
-  background-color: #f2d2f7 ;
-  border: 15px solid transparent;
-}
-.topic
-{
-  margin: 10px;
-}
-.icoo
-{
-  border: 15px solid transparent;
-}
-.a
-{
-  color: transparent;
-  border: 10px;
-}
-.abtme
-{
-  background-color: black;
-  border: 2px ;
-  border-radius: 25px;
-  height :80%;
-}
-.content
-{
-  border-left: 10px solid transparent;
-  color: black;
-  width: auto; 
-}
-.child1 {
-  display: inline-block;
-  margin: 10px;
-  width: auto;
-}
-.child2 {
-  display: inline-block;
-  vertical-align: top;
-  width: 60%;
-}
-.imgg
-{
-  border-radius: 25px;
-}body 
-
-{
-
-  background-color : black;
-
-  color: crimson;
-
-  font-family: 'ubuntu' ;
-
-}
-
-.navbar{
-
-   background-color: black;
-
-   font-size: 48;
-
-   width: 100%;
-
-}
-
-.navbarlogo
-
-{
-
-   margin: 20px;
-
    font-size: 40px;
-
 }
-
 .link
-
 {
-
   margin-top: 20px;
-
   border-radius: 25px;
-
   background-color: #f2d2f7 ;
-
   border: 15px solid transparent;
-
 } 
-
 .topic
-
 {
-
   margin: 10px;
-
 }
-
 .icoo
-
 {
-
   border: 15px solid transparent;
-
   width: 20%;
-
 }
-
 .a
-
 {
-
   color: transparent;
-
   border: 60px;
-
 }
-
 .abtme
-
 {
-
   background-color: black;
-
   border: 2px ;
-
   border-radius: 25px;
-
   height :80%;
-
 }
-
 .content
-
 {
-
   border-left: 10px solid transparent;
-
   color: black;
-
   width: auto; 
-
 }
-
 .child1 {
-
   display: inline-block;
-
   margin: 10px;
-
   width: auto;
-
 }
-
 .child2 {
-
   display: inline-block;
-
   vertical-align: top;
-
   width: 60%;
-
 }
-
 .imgg
-
 {
-
   border-radius: 25px;
-
-}
-body 
-
-{
-
-  background-color : black;
-
-  color: crimson;
-
-  font-family: 'ubuntu' ;
-
-}
-
-.navbar{
-
-   background-color: black;
-
-   font-size: 48;
-
-   width: 100%;
-
-}
-
-.navbarlogo
-
-{
-
-   margin: 20px;
-
-   font-size: 40px;
-
-}
-
-.link
-
-{
-
-  margin-top: 20px;
-
-  border-radius: 25px;
-
-  background-color: #f2d2f7 ;
-
-  border: 15px solid transparent;
-
-} 
-
-.topic
-
-{
-
-  margin: 10px;
-
-}
-
-.icoo
-
-{
-
-  border: 15px solid transparent;
-
-  width: 20%;
-
-}
-
-.a
-
-{
-
-  color: transparent;
-
-  border: 60px;
-
-}
-
-.abtme
-
-{
-
-  background-color: black;
-
-  border: 2px ;
-
-  border-radius: 25px;
-
-  height :80%;
-
-}
-
-.content
-
-{
-
-  border-left: 10px solid transparent;
-
-  color: black;
-
-  width: auto; 
-
-}
-
-.child1 {
-
-  display: inline-block;
-
-  margin: 10px;
-
-  width: auto;
-
-}
-
-.child2 {
-
-  display: inline-block;
-
-  vertical-align: top;
-
-  width: 60%;
-
-}
-
-.imgg
-
-{
-
-  border-radius: 25px;
-
 }
