@@ -7,7 +7,7 @@ app6 ="https://auth.geeksforgeeks.org/user/saurabh45215";
 
 
 var i = 0;
-var txt = 'Let’s all agree on one thing: design is about communication and storytelling. Luckily for us, so is writing. As frightening as it may seem to venture into the challenge of writing the text for your online design portfolio, remind yourself that these two disciplines ultimately have the same goal: to communicate a message. In design, you may emphasize a point through visual hierarchy, wh use both to complement and strengthen one another, essentially conveying your .';
+var txt = 'Welcome to my mini portfolio website! My name is Saurabh Saraswat. I am a frontend developer and currently staying in India. I am a person, who has high passion in web development,app development and blockchain development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!';
 var speed = 40;
 
 function typeWriter() {
