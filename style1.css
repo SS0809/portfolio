@@ -11,6 +11,7 @@ body
 }
 .navbarlogo
 {
+  font-family: 'sans-serif;';
    margin: 20px;
    font-size: 40px;
 }
@@ -27,13 +28,14 @@ body
 }
 .icoo
 {
-  border: 15px solid transparent;
-  width: 20%;
+  border: 8px solid transparent;
+  width: 22%;
 }
 .a
 {
   color: transparent;
   border: 60px;
+  width: 20%;
 }
 .abtme
 {
