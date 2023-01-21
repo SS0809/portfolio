@@ -1,12 +1,14 @@
 body 
 {
   background-color : black;
-  color: crimson;
+  color: white;
   font-family: 'ubuntu' ;
 }
 .navbar{
-   background-color: black;
-   font-size: 48;
+   top: 0;
+   left: 0;
+   background-image: linear-gradient(to right, rgba(255,0,0,0),rgba(179, 56, 209));
+   position: fixed;
    width: 100%;
 }
 .navbarlogo
@@ -17,9 +19,9 @@ body
 }
 .link
 {
-  margin-top: 20px;
+  margin-top: 60px;
   border-radius: 25px;
-  background-color: #f2d2f7 ;
+  /*background-color: #f2d2f7 ;*/
   border: 15px solid transparent;
 } 
 .topic
@@ -30,6 +32,7 @@ body
 {
   border: 8px solid transparent;
   width: 22%;
+  max-width: 120px;
 }
 .a
 {
@@ -47,7 +50,7 @@ body
 .content
 {
   border-left: 10px solid transparent;
-  color: black;
+  color: white;
   width: auto; 
 }
 .child1 {
