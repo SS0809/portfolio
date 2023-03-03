@@ -6,7 +6,7 @@ app5 ="https://leetcode.com/saurabh45215",
 app6 ="https://auth.geeksforgeeks.org/user/saurabh45215";
 
 
-var i = 0;
+var i = 0 , j = 40;
 var txt = 'Welcome to my mini portfolio website! My name is Saurabh Saraswat. I am a frontend developer and currently staying in India. I am a person, who has high passion in web development,app development and blockchain development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!';
 var speed = 40;
 
@@ -16,4 +16,22 @@ function typeWriter() {
     i++;
     setTimeout(typeWriter, speed);
   }
+}
+
+function blink()//recursive function 
+{
+
+  console.log("runned");
+  document.getElementById("blender").style.width = j + "%";  
+    j++;
+    if(j<100)
+      {
+        setTimeout(blink, 8);
+      }
+    else
+    {
+      document.getElementById("blender").style.width = "40%";  
+              setTimeout(80);
+      window.location.href = "/portfolio/hobby.html";
+    }
 }
