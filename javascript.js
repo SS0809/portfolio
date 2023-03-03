@@ -29,8 +29,9 @@ function blink()//recursive function
         setTimeout(blink, 8);
       }
     else
-    {
-      document.getElementById("blender").style.width = "40%";  
+    { 
+      j=40;
+      document.getElementById("blender").style.width = j + "%";  
               setTimeout(80);
       window.location.href = "/portfolio/hobby.html";
     }
