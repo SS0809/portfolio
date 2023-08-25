@@ -1,54 +1,91 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Saurabh Saraswat</title>
-<link rel="icon" type="image/svg" href="/favicon.svg">
-<link rel="stylesheet" href="style1.css">
+  <link rel="icon" type="image/svg" href="/favicon.svg">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Add your responsive CSS styles here */
+    @media screen and (max-width: 768px) {
+      .link {
+        margin-top: 30px;
+        border: 10px solid transparent;
+      }
+      
+      .project {
+        width: 100%;
+        padding: 5%;
+      }
+    }
+  </style>
 </head>
 <body onload="typeWriter()">
-  <nav class="navbar">
-     <div class="width">
-         <a class="navbarlogo">PORTFOLIO</a>
-     </div>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo" style="color: #09fbff; margin: 0.5%;"><b> Saurabh Saraswat</b> </div>
+      <ul class="nav-links">
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
- <div class="link">
-   <h2 class="topic">About Me</h2>
-   <div class="child1">
-     <img class="imgg" src="images/avatar.jpeg">
-   </div>
-   <div class="child2">
+  <div class="link">
+    <h2 class="topic">About Me</h2>
+    <div class="child1">
+      <img class="imgg" src="images/avatar.jpeg" alt="Profile Image">
+    </div>
+    <div class="child2">
       <p id="demo" class="content"></p>
     </div>
- </div>
-  <div class="link" onclick="blink();">
+  </div>
+
+  <!-- Projects Section -->
+  <div class="link">
+    <h2 class="topic">Projects</h2>
+    <div class="projectchild">
+      <div class="project">
+        <a href="https://github.com/moviemultiverse/blackhole" target="_blank" style="text-decoration: none; color: inherit;">
+        <img class="imgg" width="180" src="images/blackhole.png">
+        <h3 class="project-title">Blackhole</h3>
+        <p class="project-description">A Netflix Clone Fullstack</p>
+        <p class="tech-stack">A Netflix Clone Fullstack</p>
+        </a>
+      </div>
+      <div class="project">
+        <a href="https://github.com/SS0809/musicplayer" target="_blank" style="text-decoration: none; color: inherit;">
+        <img class="imgg" width="180" src="images/musicplayer.svg">
+        <h3 class="project-title">Music Player</h3>
+        <p class="project-description">music player with youtube API (synchronised)</p>
+        <p class="tech-stack">A Netflix Clone Fullstack</p>
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="link" onclick="blink();">
    <h2 class="topic">Hobbies</h2>
    <div class="child1">
      <img id="blender"class="imgg" width="180" src="images/blender.png">
    </div>
- </div>
+ </div> 
   <div class="link">
 <h2 class="topic">COMPETETIVE PROGRAMMING</h2>
 <a class="a" href ="https://www.codechef.com/users/saurabhs45215" target="_blank"><img class="icoo" src="images/codechef.svg"  alt="CODECHEF"> </a>
-<a class="a" href ="https://www.linkedin.com/in/saurabh-saraswat-88442722b"target="_blank"><img class="icoo" src="images/linkedin.png"  alt="LINKEDIN"> </a>
-<a class="a" href ="https://www.hackerrank.com/saurabh45215"target="_blank"><img class="icoo" src="images/hackerrank.png"  alt="HACKERRANK"> </a>
- <a class="a" href ="https://codeforces.com/profile/saurabh45215"target="_blank"><img class="icoo" src="images/codeforces.png"  alt="CODEFORCES"> </a>
- <a class="a" href ="https://leetcode.com/saurabh45215"target="_blank"><img class="icoo" src="images/leetcode.png"  alt="LEETCODE"> </a>
-  <a class="a" href ="https://auth.geeksforgeeks.org/user/saurabh45215"target="_blank"><img class="icoo" src="images/geeksforgeeks.png"  alt="GEEKSFORGEEKS"> </a>
-  <a class="a" href ="https://discord.gg/eUqrs94v"target="_blank"><img class="icoo" src="images/discord.png" alt="DISCORD"> </a>
-    <a class="a" href ="https://m.youtube.com/channel/UCnifm-UWSPylqVde0jDNVzA"target="_blank"><img class="icoo" src="images/youtube.png"  alt="YOUTUBE"> </a>
-    <a class="a" href ="https://github.com/SS0809"target="_blank"><img class="icoo" src="https://github.githubassets.com/favicons/favicon.svg" t="YOUTUBE"> </a>
+<a class="a" href ="https://www.linkedin.com/in/saurabh-saraswat-88442722b"target="_blank"><img class="icoo" src="images/linkedin.svg"  alt="LINKEDIN"> </a>
+<a class="a" href ="https://leetcode.com/saurabh45215"target="_blank"><img class="icoo" src="images/leetcode.svg"  alt="LEETCODE"> </a>
+<a class="a" href ="https://github.com/SS0809"target="_blank"><img class="icoo" src="https://github.githubassets.com/favicons/favicon.svg" t="YOUTUBE"> </a>
  <br> <a href=""> </a>
  </div>
- <div class="link">
+ <footer>
    <h2 class="topic">Contact Me</h2>
     <div class="contact">
-     <p>saurabh45215@gmail.com</p>
-     <p>+91 9343719054</p>
+     <p>saurabh4xxxxx@gmail.com</p>
+     <p>+91 9343xxxxxx</p>
     </div>
- </div>
+ </footer>
 <script src="javascript.js"></script>
 </body>
 </html>
