@@ -1,22 +1,53 @@
 body 
 {
-  background-image: linear-gradient(to bottom, lightblue,rgba(191, 41, 230));
+  background-image: linear-gradient(to bottom, #b7e8f7,rgb(53 179 255));
   color: white;
   font-family: 'ubuntu' ;
 }
-.navbar{
-   top: 0;
-   left: 0;
-   background-image: linear-gradient(to left,black,black);
-   position: fixed;
-   width: 100%;
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
 }
-.navbarlogo
-{
-  font-family: 'sans-serif;';
-   margin: 20px;
-   font-size: 40px;
+
+body {
+    font-family: Arial, sans-serif;
 }
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
 .link
 {
   margin-top: 60px;
@@ -32,7 +63,7 @@ body
 .icoo
 {
   border: 10px solid transparent;
-  width: 22%;
+  width: 15%;
   max-width: 120px;
 }
 .a
@@ -60,6 +91,15 @@ body
   margin: 10px;
   width: auto;
 }
+.project {
+  width: 45%; /* Adjust as needed */
+  padding: 2%;
+  text-align: left;
+}
+.projectchild{
+  display: flex;
+  justify-content: space-between;
+}
 .child2 {
   display: inline-block;
   vertical-align: top;
@@ -72,4 +112,10 @@ body
 .contact
 {
   margin: auto;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
