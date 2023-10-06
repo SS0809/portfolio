@@ -1,29 +1,28 @@
 body 
 {
-  background-image: linear-gradient(to bottom, #b7e8f7,rgb(53 179 255));
+ background-image: linear-gradient(90deg, #6d1e85,#1e20a6);
   color: white;
   font-family: 'ubuntu' ;
 }
-/* Reset some default browser styles */
+/* Reset some default browser styles 
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'ubuntu';
 }
 
 header {
-    background-color: #333;
+    background-color: #233b52;
     color: white;
-    padding: 10px 0;
+    padding: 10px ;
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
+    border-radius: 25px;
     justify-content: space-between;
     align-items: center;
 }
@@ -63,7 +62,7 @@ nav {
 .icoo
 {
   border: 10px solid transparent;
-  width: 15%;
+  width: 12%;
   max-width: 120px;
 }
 .a
@@ -82,7 +81,7 @@ nav {
 .content
 {
   border-left: 10px solid transparent;
-  color: black;
+  color: white;
   width: 100%; 
   max-width: 320px;
 }
@@ -116,6 +115,24 @@ nav {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #233b52;
     color: white;
+}
+
+div.scrollproject {
+  background-color: transparent;
+  overflow: auto;
+  word-wrap: break-word;
+ /* white-space: nowrap;*/
+}
+
+div.scrollproject a {
+  display: inline-block;
+  color: white;
+  text-align: center
+} 
+
+div.scrollproject a:hover {
+  background-color: #233b52;
+  opacity :80%;
 }
