@@ -1,2 +1,2 @@
 # portfolio
-Welcome to my mini portfolio website! My name is Saurabh Saraswat. I am a frontend developer and currently staying in India. I am a person, who has high passion in web development,app development and blockchain development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!
+ I am a Aspiring Backend developer . A person, who has high passion in web development,app development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!

@@ -7,7 +7,7 @@ app6 ="https://auth.geeksforgeeks.org/user/saurabh45215";
 
 
 var i = 0 , j = 40;
-var txt = 'Welcome to my mini portfolio website! My name is Saurabh Saraswat. I am a frontend developer and currently staying in India. I am a person, who has high passion in web development,app development and blockchain development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!';
+var txt = ' I am a Aspiring Backend developer . A person, who has high passion in web development,app development. One of my dreams is to master all the technologies and become one of the TOP developer in the world, and now, I am working toward it!';
 var speed = 40;
 
 function typeWriter() {
