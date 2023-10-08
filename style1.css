@@ -10,10 +10,6 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }*/
 
-body {
-    font-family: 'ubuntu';
-}
-
 header {
     background-color: #233b52;
     color: white;
@@ -73,9 +69,8 @@ nav {
 }
 .icoo
 {
-  border: 10px solid transparent;
-  width: 12%;
-  max-width: 120px;
+  border: 8px solid transparent;
+  width: 8%;
 }
 .a
 {
@@ -105,7 +100,6 @@ nav {
 .project {
   width: 45%; /* Adjust as needed */
   padding: 2%;
-  text-align: left;
 }
 .projectchild{
   display: flex;
@@ -124,9 +118,28 @@ nav {
 {
   margin: auto;
 }
+.download{
+  font-style: italic;
+  padding: 5%;
+  margin: 8%;
+  border-radius: 10px;
+  background-color: lightblue;
+  opacity: 80%;
+}
+.project-button{
+  font-style: italic;
+  padding: 5%;
+  border-radius: 8px;
+  background-color: lightcyan;
+  opacity: 80%;
+}
+a {
+  text-decoration: none;
+  color: inherit; 
+}
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 0.5%;
     background-color: #233b52;
     color: white;
 }
@@ -135,16 +148,17 @@ div.scrollproject {
   background-color: transparent;
   overflow: auto;
   word-wrap: break-word;
+  text-align: center;
  /* white-space: nowrap;*/
 }
 
 div.scrollproject a {
   display: inline-block;
-  color: white;
   text-align: center
 } 
 
-div.scrollproject a:hover {
-  background-color: #233b52;
+div.scrollproject div.project:hover {
+  transition: transform 0.5s;
+  transform: scale(1.06);
   opacity :80%;
 }
