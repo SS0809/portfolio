@@ -146,7 +146,7 @@ footer {
 
 div.scrollproject {
   background-color: transparent;
-  overflow: auto;
+  overflow-y: hidden;
   word-wrap: break-word;
   text-align: center;
  /* white-space: nowrap;*/
@@ -154,7 +154,7 @@ div.scrollproject {
 
 div.scrollproject a {
   display: inline-block;
-  text-align: center
+  text-align: center;
 } 
 
 div.scrollproject div.project:hover {
