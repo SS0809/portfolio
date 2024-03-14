@@ -24,12 +24,18 @@ export default function Home() {
 
   return (
     <main>
-    <div className="px-96 m-64 absolute after:absolute after:-z-20 after:h-[500px] 
+     <div className="px-96 mr-4 absolute after:absolute after:-z-20 after:h-[800px] 
          after:bg-gradient-conic after:from-sky-100 after:via-blue-900 after:blur-3xl 
-         after:content-[''] after:dark:from-sky-300 after:dark:via-[#0141ff] 
-         after:dark:opacity-40 sm:after:w-[500px] after:rounded-full"></div>
-         <div className="flex min-h-screen flex-col items-center justify-between p-24">
+         after:content-[''] after:dark:from-sky-300 after:dark:via-[#022fb5] 
+         after:dark:opacity-40 sm:after:w-[900px] after:rounded-full"></div>
+    <div className="p-48 m-64 absolute after:absolute after:-z-20 after:h-[800px] 
+         after:bg-gradient-conic after:from-sky-100 after:via-pink-900 after:blur-3xl 
+         after:content-[''] after:dark:from-sky-300 after:dark:via-[#9b03a6] 
+         after:dark:opacity-40 sm:after:w-[900px] after:rounded-full"></div>
 
+
+
+         <div className="flex min-h-screen flex-col items-center justify-between p-12">
 
       <div className="z-10 max-w-8xl w-full items-center justify-between font-mono text-sm lg:flex">
         <div className="relative">

@@ -1,3 +1,18 @@
+var confirmation = confirm("React version: https://portfolio-tan-gamma-22.vercel.app/");
+if (confirmation) {
+    window.location.href = "https://portfolio-tan-gamma-22.vercel.app/";
+} else {
+    // do something else if the user cancels
+}
+
+
+
+
+
+
+
+
+
 var app1 ="https://www.codechef.com/users/saurabhs45215" , 
 appw ="https://www.linkedin.com/in/saurabh-saraswat-88442722b",
 app3 ="https://www.hackerrank.com/saurabh45215",
