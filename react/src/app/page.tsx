@@ -24,74 +24,81 @@ export default function Home() {
 
   return (
     <main>
-     <div className="px-96 mr-4 absolute after:absolute after:-z-20 after:h-[800px] 
+      <div className="p-12 mr-4 absolute after:absolute after:-z-20 after:h-[700px] 
          after:bg-gradient-conic after:from-sky-100 after:via-blue-900 after:blur-3xl 
          after:content-[''] after:dark:from-sky-300 after:dark:via-[#022fb5] 
-         after:dark:opacity-40 sm:after:w-[900px] after:rounded-full"></div>
-    <div className="p-48 m-64 absolute after:absolute after:-z-20 after:h-[800px] 
+         after:dark:opacity-40 sm:after:w-[1100px] after:rounded-full">
+        <div className="p-12 m-48 absolute after:absolute after:-z-20 after:h-[300px] 
          after:bg-gradient-conic after:from-sky-100 after:via-pink-900 after:blur-3xl 
          after:content-[''] after:dark:from-sky-300 after:dark:via-[#9b03a6] 
-         after:dark:opacity-40 sm:after:w-[900px] after:rounded-full"></div>
-
-
-
-         <div className="flex min-h-screen flex-col items-center justify-between p-12">
-
-      <div className="z-10 max-w-8xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="relative">
-          <button
-            onClick={toggleDropdown}
-            className="bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none"
-          >
-            Toggle Dropdown
-          </button>
-          {isDropdownOpen && (
-            <div className="absolute top-full left-0 mt-2 bg-gray-800 border rounded-md shadow-lg">
-              <ul>
-                <li className="px-4 py-2 text-black">
-                  <button onClick={toggleProjects}>Projects</button>
-                </li>
-                <li className="px-4 py-2 text-black">
-                  <button onClick={toggleAboutme}>About ME</button>
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
-
-       
-
-
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://github.com/SS0809"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/avatar.jpg"
-              alt="Vercel Logo"
-              width={50}
-              height={10}
-              style={{
-                objectFit: "cover",
-                borderRadius: "70px",
-              }}
-              priority
-            />
-          </a>
+         after:dark:opacity-40 sm:after:w-[1100px] after:rounded-full">
+          <div className="p-12 m-36 absolute after:absolute after:-z-20 after:h-[400px] 
+         after:bg-gradient-conic after:from-sky-100 after:via-pink-900 after:blur-3xl 
+         after:content-[''] after:dark:from-sky-300 after:dark:via-[#9b03a6] 
+         after:dark:opacity-40 sm:after:w-[1200px] after:rounded-full">
+          </div>
         </div>
       </div>
 
 
 
+      <div className="flex min-h-screen flex-col items-center justify-between p-12">
 
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        {selectedComponent === 1 && <Projects />}
-        {selectedComponent === 0 && <Aboutme />}
-      </div>
+        <div className="z-10 max-w-8xl w-full items-center justify-between font-mono text-sm lg:flex">
+          <div className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none"
+            >
+              Toggle Dropdown
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 bg-gray-800 border rounded-md shadow-lg">
+                <ul>
+                  <li className="px-4 py-2 text-black">
+                    <button onClick={toggleProjects}>Projects</button>
+                  </li>
+                  <li className="px-4 py-2 text-black">
+                    <button onClick={toggleAboutme}>About ME</button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+
+
+
+          <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+            <a
+              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+              href="https://github.com/SS0809"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              By{" "}
+              <Image
+                src="/avatar.jpg"
+                alt="Vercel Logo"
+                width={50}
+                height={10}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "70px",
+                }}
+                priority
+              />
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+          {selectedComponent === 1 && <Projects />}
+          {selectedComponent === 0 && <Aboutme />}
+        </div>
       </div>
     </main>
   );
