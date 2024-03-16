@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <main>
       <div className="p-12 mr-4 absolute after:absolute after:-z-20 after:h-[850px] 
-         after:bg-gradient-conic after:from-sky-100 after:via-blue-900 after:blur-3xl 
-         after:content-[''] after:dark:from-sky-300 after:dark:via-[#022fb5] 
+         after:bg-gradient-to-r after:from-sky-100 after:via-blue-100 after:blur-3xl 
+         after:content-[''] after:dark:from-sky-500 after:dark:via-[#022fb5] 
          after:dark:opacity-30 sm:after:w-[1800px] after:rounded-2xl">
       </div>
 
