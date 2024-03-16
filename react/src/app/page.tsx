@@ -24,20 +24,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className="p-12 mr-4 absolute after:absolute after:-z-20 after:h-[700px] 
+      <div className="p-12 mr-4 absolute after:absolute after:-z-20 after:h-[850px] 
          after:bg-gradient-conic after:from-sky-100 after:via-blue-900 after:blur-3xl 
          after:content-[''] after:dark:from-sky-300 after:dark:via-[#022fb5] 
-         after:dark:opacity-40 sm:after:w-[1100px] after:rounded-full">
-        <div className="p-12 m-48 absolute after:absolute after:-z-20 after:h-[300px] 
-         after:bg-gradient-conic after:from-sky-100 after:via-pink-900 after:blur-3xl 
-         after:content-[''] after:dark:from-sky-300 after:dark:via-[#9b03a6] 
-         after:dark:opacity-40 sm:after:w-[1100px] after:rounded-full">
-          <div className="p-12 m-36 absolute after:absolute after:-z-20 after:h-[400px] 
-         after:bg-gradient-conic after:from-sky-100 after:via-pink-900 after:blur-3xl 
-         after:content-[''] after:dark:from-sky-300 after:dark:via-[#9b03a6] 
-         after:dark:opacity-40 sm:after:w-[1200px] after:rounded-full">
-          </div>
-        </div>
+         after:dark:opacity-30 sm:after:w-[1800px] after:rounded-2xl">
       </div>
 
 

@@ -21,12 +21,15 @@ export default function Aboutme() {
             for Server Side Technologies and Cloud Services.
           </p>
           <h1 className="p-10 text-xl"> Technologies Familiar with..</h1>
-          <ul className="list-disc pl-20 text-base">
-            <li>Node.js</li>
+          <ul className="list-disc pl-20 text-base" style={{color:"grey"}}>
+            <li>Node</li>
             <li>MongoDB</li>
             <li>Docker</li>
             <li>AWS</li>
             <li>AZURE</li>
+            <li>Flutter</li>
+            <li>React && React Native</li>
+            <li>PhP</li>
           </ul>
         </div>
       </div>
