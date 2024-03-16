@@ -1,9 +1,3 @@
-var confirmation = confirm("React version: https://portfolio-tan-gamma-22.vercel.app/");
-if (confirmation) {
-    window.location.href = "https://portfolio-tan-gamma-22.vercel.app/";
-} else {
-    // do something else if the user cancels
-}
 
 
 

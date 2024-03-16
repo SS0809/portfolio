@@ -38,18 +38,21 @@ export default function Home() {
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="bg-gray-800 text-white px-4 py-2 rounded-md focus:outline-none"
+              className="bg-transparent text-white px-4 py-2 rounded-md focus:outline-none"
             >
               Toggle Dropdown
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-4 bg-gray-800 border rounded-md shadow-lg">
+              <div className="p-2 m-4 absolute top-full bg-gray-900 rounded-md shadow-lg">
                 <ul>
-                  <li className="px-4 py-2 text-black">
+                  <li className="px-4 py-2">
                     <button onClick={toggleProjects}>Projects</button>
                   </li>
-                  <li className="px-4 py-2 text-black">
+                  <li className="px-4 py-2">
                     <button onClick={toggleAboutme}>About ME</button>
+                  </li>
+                  <li className="px-4 py-2">
+                    <a href="https://ss0809.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Old Portfolio</a>
                   </li>
                 </ul>
               </div>
