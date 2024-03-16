@@ -33,8 +33,8 @@ async function fetchData(repo) {
             description: data.description,
             html_url: data.html_url,
             open_issues: data.open_issues,
-            description: data.description,
             size: data.size,
+            link: data.homepage,
             message: commitMessage
         };
     } catch (error) {
@@ -43,12 +43,6 @@ async function fetchData(repo) {
     }
 }
 
-// Example usage
-async function exampleUsage() {
-    const repositoryData = await fetchData('getinsta');
-    console.log("Fetched Repository Data:", repositoryData);
-}
 
-exampleUsage();
 
 module.exports = { fetchData };

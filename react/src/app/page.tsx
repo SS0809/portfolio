@@ -53,7 +53,7 @@ export default function Home() {
               Toggle Dropdown
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-gray-800 border rounded-md shadow-lg">
+              <div className="absolute top-full left-0 mt-4 bg-gray-800 border rounded-md shadow-lg">
                 <ul>
                   <li className="px-4 py-2 text-black">
                     <button onClick={toggleProjects}>Projects</button>
@@ -79,7 +79,7 @@ export default function Home() {
               By{" "}
               <Image
                 src="/avatar.jpg"
-                alt="Vercel Logo"
+                alt=" Logo"
                 width={50}
                 height={10}
                 style={{
@@ -95,7 +95,7 @@ export default function Home() {
 
 
 
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex">
           {selectedComponent === 1 && <Projects />}
           {selectedComponent === 0 && <Aboutme />}
         </div>

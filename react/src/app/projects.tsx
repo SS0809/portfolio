@@ -5,7 +5,7 @@ export default function Projects(): JSX.Element {
   const [repositoryDataList, setRepositoryDataList] = useState<any[]>([]);
 
   useEffect(() => {
-    const repositoryNames = ['getinsta', 'core', 'cloudie', 'controller', 'musicplayer', 'PortfolioBuilder', 'DataApi'];
+    const repositoryNames = [ 'blackhole' , 'blackhole_js' , 'getinsta', 'core', 'cloudie', 'controller', 'musicplayer', 'PortfolioBuilder', 'DataApi' , 'whatsappUIclone' , 'portfolio' ];
 
     const fetchRepositoryData = async () => {
       const repositoryDataPromises = repositoryNames.map(async (repoName) => {
@@ -27,7 +27,7 @@ export default function Projects(): JSX.Element {
 
   return (
     <main>
-      <div className="mb-16 p-8 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-16 p-12 grid text-center lg:max-w-8xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         {repositoryDataList.map((repositoryData, index) => (
           <a
             key={index}
@@ -36,14 +36,15 @@ export default function Projects(): JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold" >{repositoryData.name}</h2>
-            <h6 className="mb-3 text-1xl"
+            <h2 className="mb-3 text-2xl" >{repositoryData.name}</h2>
+            <a className="mb-3 text-1xl" href={repositoryData.link} style={{color:'blue'}}>LINK</a>
+            <h6 className="mb-1 text-1xl"
             style={{ color: repositoryData?.open_issues === 0 ? 'green' : 'orange' }}
           >{ repositoryData?.open_issues } open_issues</h6>
-          <h6 className="mb-3 text-1xl"
-            style={{ color: 'brown' }}
+          <h6 className="mb-1 text-1xl"
+            style={{ color: 'purple' }}
           > { repositoryData?.message }</h6>
-          <h6 className="mb-3 text-1xl" style={{ color: repositoryData?.size > 1000 ? 'orange' : 'green' }}
+          <h6 className="mb-1 text-1xl" style={{ color: repositoryData?.size > 1000 ? 'orange' : 'green' }}
           >{ repositoryData?.size } KB</h6>
             <p className="m-0 max-w-[30ch] text-sm opacity-50">{repositoryData.description}</p>
           </a>
