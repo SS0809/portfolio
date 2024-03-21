@@ -20,16 +20,14 @@ export default function Aboutme() {
             I am a Student Backend developer. A person who has a high passion
             for Server Side Technologies and Cloud Services.
           </p>
-          <h1 className="p-10 text-xl"> Technologies Familiar with..</h1>
-          <ul className="list-disc pl-20 text-base" style={{color:"grey"}}>
-            <li>Node</li>
-            <li>MongoDB</li>
-            <li>Docker</li>
-            <li>AWS</li>
-            <li>AZURE</li>
-            <li>Flutter</li>
+          <h1 className="p-10 text-xl"> Technologies I'm Familiar with..</h1>
+          <ul className="list-disc pl-20 text-bold" style={{color:"grey"}}>
+            <li>NodeJs && MongoDB && Redis</li>
+            <li>Docker && Docker Swarm</li>
+            <li>AWS && AZURE [Services]</li>
+            <li>Flutter && Services</li>
             <li>React && React Native</li>
-            <li>PhP</li>
+            <li>PhP && Bash</li>
           </ul>
         </div>
       </div>
