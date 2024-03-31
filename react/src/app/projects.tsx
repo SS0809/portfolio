@@ -5,7 +5,7 @@ export default function Projects(): JSX.Element {
   const [repositoryDataList, setRepositoryDataList] = useState<any[]>([]);
 
   useEffect(() => {
-    const repositoryNames = [ 'blackhole' , 'blackhole_js' , 'getinsta', 'core', 'cloudie', 'controller', 'musicplayer', 'PortfolioBuilder', 'DataApi' , 'whatsappUIclone' , 'portfolio' ];
+    const repositoryNames = [ 'blackhole' , 'blackhole_js' , 'getinsta', 'core', 'coreUI' , 'cloudie', 'controller', 'musicplayer', 'PortfolioBuilder', 'DataApi' , 'whatsappUIclone' , 'portfolio' ];
 
     const fetchRepositoryData = async () => {
       const repositoryDataPromises = repositoryNames.map(async (repoName) => {

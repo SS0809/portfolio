@@ -22,12 +22,12 @@ export default function Aboutme() {
           </p>
           <h1 className="p-10 text-xl"> Technologies I'm Familiar with..</h1>
           <ul className="list-disc pl-20 text-bold" style={{color:"grey"}}>
-            <li>NodeJs && MongoDB && Redis</li>
-            <li>Docker && Docker Swarm</li>
-            <li>AWS && AZURE [Services]</li>
-            <li>Flutter && Services</li>
-            <li>React && React Native</li>
-            <li>PhP && Bash</li>
+            <li>NodeJs &amp;&amp; MongoDB &amp;&amp; Redis</li>
+            <li>Docker &amp;&amp; Docker Swarm</li>
+            <li>AWS &amp;&amp; AZURE [Services]</li>
+            <li>Flutter &amp;&amp; Services</li>
+            <li>React &amp;&amp; React Native</li>
+            <li>PhP &amp;&amp; Bash</li>
           </ul>
         </div>
       </div>
