@@ -6,10 +6,10 @@ const client = createClient({
     username: 'default',
     password:  process.env.REDIS_PASSWORD,
     socket: {
-        host: '127.0.0.1',
-        port: 6379,
-        // host:  process.env.REDIS_USERNAME,
-        // port: 12399,
+        // host: '127.0.0.1',
+        // port: 6379,
+        host:  process.env.REDIS_USERNAME,
+        port: 12399,
     },
 });
 const initializeRedis = async () => {
