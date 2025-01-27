@@ -28,8 +28,7 @@ const getRedisData = async (key) => {
         const result = await client.get(key);
         if (result === null) {
             console.log(`Key "${key}" not found in Redis`);
-            setRedisData(fetchData(key));
-            console.log(`Added in redis "${key}"`);
+            // await setRedisData(fetchData(key));
             return null;
         }
         console.log(`Data for key "${key}":`, result);
@@ -40,12 +39,11 @@ const getRedisData = async (key) => {
 };
 
 // Set data in Redis
-const setRedisData = async (key) => {
+const setRedisData = async (repoName , apiData) => {
     try {
-        const data = await fetchData(key);
-        await client.set(key, JSON.stringify(data));
+        await client.set(repoName, JSON.stringify(apiData));
         console.log(`Data for key "${key}" saved to Redis`);
-        return data;
+        return apiData;
     } catch (error) {
         console.error('Error saving data to Redis:', error);
     }
@@ -56,13 +54,13 @@ const main = async () => {
     await initializeRedis();
 
     // Example usage
-    const key = 'proximity';
-    let data = await getRedisData(key);
-    if (!data) {
-        console.log('Key not found, fetching and storing data...');
-        data = await fetchData(key);
-    }
-    console.log('Final data:', data);
+    // const key = 'proximity';
+    // let data = await getRedisData(key);
+    // if (!data) {
+    //     console.log('Key not found, fetching and storing data...');
+    //     data = await fetchData(key);
+    // }
+    // console.log('Final data:', data);
 };
 
 // Run main function
