@@ -1,8 +1,8 @@
-const { Octokit } = require("@octokit/core");
+import { Octokit } from "@octokit/core";
 const git_token = process.env.git_token;
 const octokit = new Octokit({ auth: git_token });
 
-async function fetchData(repo) {
+export default async function fetchData(repo) {
     try {
         // Fetch repository information
         const { data } = await octokit.request('GET /repos/{owner}/{repo}', {
@@ -44,5 +44,4 @@ async function fetchData(repo) {
 }
 
 
-
-module.exports = { fetchData };
+//TODO redis integrate , rate limit api for github & save cache to redis 

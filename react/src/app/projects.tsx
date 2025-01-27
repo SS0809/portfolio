@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData } from './git'; // Assuming fetchData is exported from git.js
+import fetchData from './git.js'; // Assuming fetchData is exported from git.js
+import {getRedisData ,setRedisData} from './redis.js'; 
 
 export default function Projects(): JSX.Element {
   const [repositoryDataList, setRepositoryDataList] = useState<any[]>([]);
@@ -10,7 +11,7 @@ export default function Projects(): JSX.Element {
     const fetchRepositoryData = async () => {
       const repositoryDataPromises = repositoryNames.map(async (repoName) => {
         try {
-          const data = await fetchData(repoName);
+          const data = await getRedisData(repoName); // TODO
           return data;
         } catch (error) {
           console.error(`Error fetching repository data for ${repoName}:`, error);
