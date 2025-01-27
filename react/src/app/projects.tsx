@@ -11,8 +11,21 @@ export default function Projects(): JSX.Element {
     ];
     const fetchRepositories = async () => {
       try {
+        for(var i =0 ; i <repositoryNames.length ; i++){
+          const data = await getRedisData(repositoryNames[i]);
+          if (!data) {
+            console.warn(`Key "${repositoryNames[i]}" not found in Redis`);
+            continue; 
+          }
+          setRepositoryDataList((prevDataList) => {
+            if (!prevDataList.some(repo => repo.name === data.name)) {
+              return [...prevDataList, data];
+            }
+            return prevDataList;
+          });
+        }
         for (const repoName of repositoryNames) {
-          const data = await getRedisData(repoName);
+          const data = await getRedisData(repoName);//TODO multiple api calls
           if (!data) {
             console.warn(`Key "${repoName}" not found in Redis`);
             continue; 
@@ -38,7 +51,7 @@ export default function Projects(): JSX.Element {
         {repositoryDataList.map((repositoryData, index) => (
           <a
             key={index}
-            className="group rounded-lg px-5 py-4 transition-all transform hover:translate-y-2 hover:shadow-lg hover:scale-105"
+            className="group rounded-lg px-8 py-10 transition-all transform hover:translate-y-2 hover:shadow-lg hover:scale-105"
             style={{
               transition: 'transform 0.3s, box-shadow 0.3s',
               willChange: 'transform, box-shadow',
