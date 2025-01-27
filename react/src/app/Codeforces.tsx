@@ -4,11 +4,11 @@ export default function Codeforces() {
   const username = 'saurabh45215'; // Replace with the desired Codeforces username
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="">
       <img
-        src={`https://codeforces-readme-stats.vercel.app/api/card?username=${username}`}
+        className='w-[50rem] mt-16'
+        src={`https://codeforces-readme-stats.vercel.app/api/card?theme=github_dark&username=${username}`}
         alt={`${username}'s Codeforces stats`}
-        className="max-w-full h-auto"
       />
     </div>
   );

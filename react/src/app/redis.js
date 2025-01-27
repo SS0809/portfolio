@@ -4,8 +4,10 @@ import fetchData from './git';
 
 const client = createClient({
     username: 'default',
-    password: 'SO9yfZPB91d1sNdOdiCpjTeD46cBcuew',
+    password:  process.env.REDIS_PASSWORD,
     socket: {
+        // host: '127.0.0.1',
+        // port: 6379,
         host: 'redis-12399.c11.us-east-1-3.ec2.redns.redis-cloud.com',
         port: 12399,
     },
@@ -21,17 +23,17 @@ const initializeRedis = async () => {
         console.error('Error connecting to Redis:', error);
     }
 };
-
 // Get data from Redis
 const getRedisData = async (key) => {
     try {
         const result = await client.get(key);
         if (result === null) {
-            console.log(`Key "${key}" not found in Redis`);
-            // await setRedisData(fetchData(key));
-            return null;
+            console.log(`Key "${(key)}" not found in Redis`);
+            const data = await fetchData(key);
+            const dataa = await setRedisData(key ,data);
+            return dataa;
         }
-        console.log(`Data for key "${key}":`, result);
+        console.log(`Data for key "${key}":`);
         return JSON.parse(result); // Assuming JSON data
     } catch (error) {
         console.error('Error fetching data from Redis:', error);
@@ -42,7 +44,7 @@ const getRedisData = async (key) => {
 const setRedisData = async (repoName , apiData) => {
     try {
         await client.set(repoName, JSON.stringify(apiData));
-        console.log(`Data for key "${key}" saved to Redis`);
+        console.log(`Data for key "${repoName}" saved to Redis`);
         return apiData;
     } catch (error) {
         console.error('Error saving data to Redis:', error);

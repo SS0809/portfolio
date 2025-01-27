@@ -33,7 +33,7 @@ export default function Home() {
         after:dark:opacity-30 sm:after:w-[1800px] after:rounded-2xl">
       </div>
 
-      <div className="flex min-h-screen flex-col items-center justify-between p-12">
+      <div className="flex min-h-screen flex-col items-center justify-start p-12">
         <div className="z-10 max-w-8xl w-full items-center justify-between font-mono text-sm lg:flex">
           {/* Dropdown */}
           <div className="relative">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import fetchData from './git.js'; // Assuming fetchData fetches data from GitHub API.
-import { getRedisData, setRedisData } from './redis.js'; // Import Redis functions.
+import { getRedisData } from './redis.js'; // Import Redis functions.
 
 export default function Projects(): JSX.Element {
   const [repositoryDataList, setRepositoryDataList] = useState<any[]>([]);
@@ -11,41 +10,41 @@ export default function Projects(): JSX.Element {
       'coreUI', 'cloudie', 'controller', 'musicplayer', 'PortfolioBuilder',
       'DataApi', 'whatsappUIclone', 'portfolio'
     ];
-
-    // Wrapper to ensure atomicity for `getRedisData`.
-    const fetchRepositoryDataAtomically = async (repoName: string) => {
+  
+    const fetchRepositories = async () => {
       try {
-        // Attempt to get data from Redis.
-        const cachedData = await getRedisData(repoName);
-        if (cachedData) {
-          return cachedData; // Return cached data if available.
-        }
-
-        // If not in cache, fetch from GitHub API.
-        const apiData = await fetchData(repoName);
-
-        // Update Redis with new data for future use.
-        await setRedisData(repoName, apiData);
-
-        return apiData;
+        // Fetch all data concurrently
+        const fetchedDataList = await Promise.all(
+          repositoryNames.map(async (repoName) => {
+            const data = await getRedisData(repoName);
+            if (!data) {
+              console.warn(`Key "${repoName}" not found in Redis`);
+              return null; // Handle missing data gracefully
+            }
+            // Wait for 1 second
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            
+            return data;
+          })
+        );
+  
+        // Filter out null values (keys not found in Redis)
+        const validDataList = fetchedDataList.filter((data) => data !== null);
+  
+        // Update the state with valid data
+        setRepositoryDataList(validDataList);
+  
+        // Log the final count of successfully fetched repositories
+        console.log(`Successfully fetched ${validDataList.length} repositories.`);
       } catch (error) {
-        console.error(`Error fetching data for ${repoName}:`, error);
-        return null;
+        console.error('Error fetching repositories:', error);
       }
     };
+  
+    fetchRepositories();  
 
-    const fetchRepositoriesIncrementally = async () => {
-      for (const repoName of repositoryNames) {
-        const repositoryData = await fetchRepositoryDataAtomically(repoName);
-
-        if (repositoryData) {
-          setRepositoryDataList((prevList) => [...prevList, repositoryData]);
-        }
-      }
-    };
-
-    fetchRepositoriesIncrementally();
   }, []);
+
 
   return (
     <main>

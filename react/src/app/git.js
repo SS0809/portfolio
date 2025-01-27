@@ -1,6 +1,26 @@
 import { Octokit } from "@octokit/core";
-const git_token = process.env.git_token;
+const git_token = process.env.GIT_TOKEN;
 const octokit = new Octokit({ auth: git_token });
+import { getRedisData } from "./redis";
+// Main function
+const main = async () => {
+    // Example usage
+    const repoName = 'proximity';
+    try {
+            // const data = await getRedisData(repoName);
+            //     if (!data) {
+            //       console.warn(`Key "${repoName}" not found in Redis`);
+            //       return null; // Handle missing data gracefully
+            //     }
+        console.log(`Data for key "${JSON.stringify(fetchData(repoName))}":`);
+        // console.log('Final data:', dataa);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
+
+// Run main function
+// main().catch((err) => console.error('Error in main:', err));
 
 export default async function fetchData(repo) {
     try {
