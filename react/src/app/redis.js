@@ -23,6 +23,55 @@ const initializeRedis = async () => {
     }
 };
 
+// Batch function to fetch multiple keys in parallel
+const getRedisDataBatch = async (keys) => {
+    if (!client.isOpen) {
+        console.error('Redis client is not connected');
+        return [];
+    }
+
+    try {
+        // Use Promise.all to fetch all keys in parallel
+        const results = await Promise.all(
+            keys.map(async (key) => {
+                try {
+                    // Check if key is already processed
+                    if (fetchedKeys.has(key)) {
+                        console.log(`Key "${key}" already fetched, using cached data.`);
+                        return JSON.parse(await client.get(key));
+                    }
+
+                    const result = await client.get(key);
+
+                    if (!result) {
+                        console.log(`Key "${key}" not found in Redis, fetching from API...`);
+                        const apiData = await fetchData(key);
+                        if (apiData) {
+                            await setRedisData(key, apiData);
+                            fetchedKeys.add(key);
+                            return apiData;
+                        }
+                        return null;
+                    }
+
+                    console.log(`Data for key "${key}" found in Redis.`);
+                    fetchedKeys.add(key);
+                    return JSON.parse(result);
+                } catch (error) {
+                    console.error(`Error processing key "${key}":`, error);
+                    return null;
+                }
+            })
+        );
+
+        return results.filter(result => result !== null);
+    } catch (error) {
+        console.error('Error in batch operation:', error);
+        return [];
+    }
+};
+
+// Original single key function (kept for backward compatibility)
 const getRedisData = async (key) => {
     if (!client.isOpen) {
         console.error('Redis client is not connected');
@@ -40,38 +89,69 @@ const getRedisData = async (key) => {
 
         if (!result) {
             console.log(`Key "${key}" not found in Redis, fetching from API...`);
-            const apiData = await fetchData(key); // Fetch data if not in cache
-            await setRedisData(key, apiData);
-            fetchedKeys.add(key); // Mark key as fetched
-            return apiData;
+            const apiData = await fetchData(key);
+            if (apiData) {
+                await setRedisData(key, apiData);
+                fetchedKeys.add(key);
+                return apiData;
+            }
+            return null;
         }
 
         console.log(`Data for key "${key}" found in Redis.`);
-        fetchedKeys.add(key); // Mark key as fetched
+        fetchedKeys.add(key);
         return JSON.parse(result);
     } catch (error) {
         console.error('Error fetching data from Redis:', error);
+        return null;
     }
 };
 
 const setRedisData = async (key, data) => {
     try {
-        await client.set(key, JSON.stringify(data), { EX: 86400 }); //deletes in a day
+        await client.set(key, JSON.stringify(data), { EX: 86400 }); // expires in a day
         console.log(`Data for key "${key}" saved to Redis`);
         return data;
     } catch (error) {
         console.error('Error saving data to Redis:', error);
+        return null;
+    }
+};
+
+// Optimized batch set function for multiple keys
+const setRedisDataBatch = async (dataArray) => {
+    if (!Array.isArray(dataArray) || dataArray.length === 0) {
+        return [];
+    }
+
+    try {
+        const pipeline = client.multi();
+        
+        dataArray.forEach(({ key, data }) => {
+            pipeline.set(key, JSON.stringify(data), { EX: 86400 });
+        });
+
+        await pipeline.exec();
+        console.log(`Batch saved ${dataArray.length} keys to Redis`);
+        return dataArray;
+    } catch (error) {
+        console.error('Error in batch set operation:', error);
+        return [];
     }
 };
 
 // Graceful shutdown
 process.on('SIGINT', async () => {
-    await client.disconnect();
-    console.log('Redis client disconnected');
+    try {
+        await client.disconnect();
+        console.log('Redis client disconnected');
+    } catch (error) {
+        console.error('Error disconnecting Redis:', error);
+    }
     process.exit(0);
 });
 
 // Initialize Redis connection
 initializeRedis();
 
-export { getRedisData, setRedisData };
+export { getRedisData, setRedisData, getRedisDataBatch, setRedisDataBatch };
