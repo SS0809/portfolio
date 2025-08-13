@@ -376,6 +376,13 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </div>
+      
+      {/* Footer - Powered by Redis & Vercel */}
+      <div className="fixed bottom-4 left-4 flex items-center space-x-4 bg-gray-800 px-4 py-2 rounded-lg shadow-lg border border-gray-700">
+        <span className="text-gray-400 text-sm">Powered by</span>
+        <img src={"./redis.png"} alt="Redis" className="h-6 w-auto hover:scale-100 transition-transform" />
+        <img src={"./vercel.svg"} alt="Vercel" className="h-5 w-auto hover:scale-100 transition-transform" />
+      </div>
     </main>
   );
 }
