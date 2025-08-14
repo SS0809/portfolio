@@ -9,7 +9,7 @@ export default function Projects(): JSX.Element {
 
   useEffect(() => {
     const repositoryNames = [
-      'gsinfra','razorpay-next','blackhole', 'blackhole_js', 'whatsappUIclone', 'portfolio',
+      'railwayfrontend','gsinfra','razorpay-next','blackhole', 'blackhole_js', 'whatsappUIclone', 'portfolio',
       'getinsta', 'core', 'coreUI', 'controller', 'musicplayer', 
       'PortfolioBuilder', 'proximity', 'wallpy', 'cloudie','DataApi', 
     ];
