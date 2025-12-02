@@ -1,0 +1,250 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Saurabh Saraswat
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Saurabh Saraswat} \\ \vspace{1pt}
+    Backend Developer | Java | Spring Boot | Microservices \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-93437-19054 ~ 
+    \href{mailto:saurabh45215@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{saurabh45215@gmail.com}} ~ 
+    \href{https://linkedin.com/in/ss0809}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ss0809}} ~
+    \href{https://github.com/ss0809}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/ss0809}} \\
+    \small \href{https://blog.saura8h.rest}{\raisebox{-0.2\height}\faGlobe\ \underline{blog.saura8h.rest}} ~
+    \faMapMarker\ Bhopal, Madhya Pradesh, India
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        Backend Developer with hands-on experience in building scalable backend systems using Java, Spring Boot, REST APIs, and MySQL. Strong foundation in Data Structures and Algorithms, microservices architecture, and cloud fundamentals (AWS and Azure). Demonstrated expertise through 2500+ GitHub commits and 150+ LeetCode problem solutions.
+    }}
+ \end{itemize}
+ \vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{August 2025 -- Present}
+      {Capgemini}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Developing backend modules using Java 17, Spring Boot, and microservice architecture for enterprise applications}
+        \resumeItem{Optimizing REST APIs through performance tuning, reducing latency by improving request/response flow patterns}
+        \resumeItem{Implementing database solutions with MySQL, JPA/Hibernate for efficient data persistence and retrieval}
+        \resumeItem{Collaborating with cross-functional teams in Agile environment for seamless deployment and production support}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{May 2025 -- July 2025}
+      {Capgemini}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Built RESTful backend services using Spring Boot MVC architecture following industry best practices}
+        \resumeItem{Developed comprehensive unit tests using JUnit and Maven to ensure code quality and API reliability}
+        \resumeItem{Gained hands-on experience in debugging production issues and implementing cloud deployment strategies}
+        \resumeItem{Strengthened understanding of Object-Oriented Programming principles and clean code architecture}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Java, C++ (NPTEL Certified), Python (Beginner)} \\
+     \textbf{Backend Technologies}{: Spring Boot, Spring Cloud, Microservices, REST APIs, JWT, Hibernate/JPA} \\
+     \textbf{Databases}{: MySQL, MongoDB, PostgreSQL, Redis} \\
+     \textbf{Frontend Technologies}{: HTML, CSS, JavaScript, React.js, Flutter} \\
+     \textbf{Cloud \& DevOps}{: AWS Lambda, AWS EC2, Docker, Kubernetes} \\
+     \textbf{Tools}{: Git/GitHub, Maven, Gradle, IntelliJ IDEA, VS Code, Postman} \\
+     \textbf{Core Competencies}{: Data Structures \& Algorithms, Object-Oriented Programming, System Design, Microservices Architecture}
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{RailConnect -- Railway Reservation System} $|$ \emph{Java, Spring Boot, MySQL, Microservices}}{\href{https://github.com/ss0809}{\faGithub}}
+          \resumeItemListStart
+            \resumeItem{Architected microservice-based system with 5 core services (User, Train, Ticket) ensuring scalability and modularity}
+            \resumeItem{Implemented inter-service communication using Feign Clients for seamless REST-based interactions}
+            \resumeItem{Designed efficient MySQL schema for relational data management and optimized query performance}
+          \resumeItemListEnd
+          \vspace{-13pt}
+    
+      \resumeProjectHeading
+          {\textbf{ChalakSaathi -- Vehicle Assistance Platform} $|$ \emph{Android, Redis, AWS Lambda, Java}}{\href{https://github.com/SS0809/proximity}{\faGithub}}
+          \resumeItemListStart
+            \resumeItem{Built reliable vehicle assistance application with real-time location tracking and emergency support features}
+            \resumeItem{Utilized Redis for caching and AWS Lambda for serverless backend processing ensuring scalability}
+            \resumeItem{Implemented secure authentication and session management for enhanced user data protection}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{BLean -- Gym Management Application} $|$ \emph{Flutter, MongoDB, AWS Lambda, JWT}}{\href{https://github.com/SS0809/gymapp}{\faGithub}}
+          \resumeItemListStart
+            \resumeItem{Developed cross-platform gym management app with membership plans, user authentication, and activity logging}
+            \resumeItem{Designed NoSQL database schema in MongoDB for flexible data management and rapid feature iteration}
+            \resumeItem{Implemented JWT-based authentication and biometric security for enhanced user access control}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{Go OOT Core -- Video Management System} $|$ \emph{Flutter, MongoDB, GraphQL, Java, GDrive APIs}}{\href{https://github.com/moviemultiverse/core}{\faGithub}}
+          \resumeItemListStart
+            \resumeItem{Built video streaming server and client application with cloud storage integration using Google Drive APIs}
+            \resumeItem{Developed RESTful and GraphQL APIs for efficient video metadata management and content delivery}
+            \resumeItem{Implemented scalable architecture supporting concurrent video uploads and streaming operations}
+          \resumeItemListEnd 
+          
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbullet\ Solved 150+ problems on LeetCode with maximum 50-day streak badge - \href{https://leetcode.com/u/saurabh45215/}{\underline{leetcode.com/u/saurabh45215}} \\
+        \textbullet\ Earned 5-star Gold Badge for C++ programming on HackerRank - \href{https://hackerrank.com/profile/saurabh45215}{\underline{hackerrank.com/profile/saurabh45215}} \\
+        \textbullet\ Solved 80+ competitive programming questions on CodeChef - \href{https://codechef.com/users/saurabhs45215}{\underline{codechef.com/users/saurabhs45215}} \\
+        \textbullet\ Contributed 2500+ commits across repositories on GitHub - \href{https://github.com/ss0809}{\underline{github.com/ss0809}} \\
+        \textbullet\ Hacktoberfest 2023 Contributor (Levels 0-4 completed)
+    }}
+\end{itemize}
+\vspace{-16pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Technocrats Institute of Technology}{November 2021 -- August 2025}
+      {Bachelor of Technology in Computer Science Engineering -- CGPA: 8.02/10.0}{Bhopal, India}
+    \resumeSubheading
+      {Oxford Higher Secondary School}{2021}
+      {Senior Secondary (12th) - Physics, Chemistry, Mathematics -- 85.00\%}{Sehore, India}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbullet\ Microsoft Certified: Azure AI Fundamentals (Capgemini) \\
+        \textbullet\ Introduction to Generative AI (Google) \\
+        \textbullet\ Introduction to Large Language Models (Google) \\
+        \textbullet\ Responsive AI (Google) \\
+        \textbullet\ Ocean L1 Grade A4 (Capgemini) \\
+        \textbullet\ Google Foundations of Cybersecurity \\
+        \textbullet\ Postman API Fundamentals Student Expert \\
+        \textbullet\ NPTEL Certification in C++ Programming
+    }}
+\end{itemize}
+
+\end{document}
