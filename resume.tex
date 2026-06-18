@@ -1,0 +1,227 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Saurabh Saraswat
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Saurabh Saraswat} \\ \vspace{1pt}
+    Backend Developer | Java | Spring Boot | Microservices \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-XXXXXXXXXX ~ 
+    \href{mailto:saurabh45215@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{saurabh45215@gmail.com}} ~ 
+    \href{https://linkedin.com/in/ss0809}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ss0809}} ~
+    \href{https://saura8h.top}{\raisebox{-0.2\height}\faGlobe\ \underline{saura8h.rest}} \\
+    \small \faMapMarker\ Bhopal, Madhya Pradesh, India
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        Backend Developer with hands-on experience in building scalable backend systems using Java, Spring Boot, REST APIs, and MySQL. Strong foundation in Data Structures and Algorithms, microservices, cloud fundamentals (AWS and Azure).
+    }}
+ \end{itemize}
+ \vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer}{August 2025 -- Present}
+      {Capgemini}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Develop backend modules using Java 17, Spring Boot, and microservice architecture}
+        \resumeItem{Optimize REST APIs, improving request/response flow and enhancing latency}
+        \resumeItem{Work with MySQL, JPA/Hibernate, and internal service integrations}
+        \resumeItem{Collaborate with cross-functional teams for deployment and debugging}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Intern}{May 2025 -- July 2025}
+      {Capgemini}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Built backend services using Spring Boot MVC and RESTful patterns}
+        \resumeItem{Gained practical experience in debugging, writing unit tests, and improving API reliability}
+        \resumeItem{Strengthened fundamentals of Object-Oriented Programming, clean architecture, and cloud deployment}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Frameworks and Libraries}{: Spring Boot, Spring Cloud, JWT, Hibernate, JPA, MySQL, MongoDB, PostgreSQL} \\
+     \textbf{Tools and Platforms}{: Docker, Kubernetes, AWS Lambda, Git} \\
+     \textbf{Core Competencies}{: Data Structures and Algorithms, Object-Oriented Programming, Microservices Architecture, REST API Design}
+    }}
+ \end{itemize}
+ \vspace{-14pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{BLean - Gym Management Application} $|$ \emph{Flutter, MongoDB, AWS Lambda, JWT, Java}}{}
+          \resumeItemListStart
+            \resumeItem{Developed multi-platform application with backend services for membership management}
+            \resumeItem{Designed backend logic for membership plans, user authentication, and activity logging systems}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{Go OOT Core - Video Management System} $|$ \emph{Flutter, MongoDB, GraphQL, Java, Google Drive APIs}}{}
+          \resumeItemListStart
+            \resumeItem{Built video server and client application with cloud storage integration}
+            \resumeItem{Developed RESTful and GraphQL APIs for video metadata and streaming}
+            \resumeItem{Integrated Google Drive APIs for scalable video storage}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{PlayMe - Music Streaming Server} $|$ \emph{PHP, PostgreSQL, YouTube APIs}}{}
+          \resumeItemListStart
+            \resumeItem{Created streaming backend with database integration for user playlists}
+            \resumeItem{Implemented YouTube API integration for content streaming}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          
+      \resumeProjectHeading
+          {\textbf{PortfolioBuilder - Portfolio Generator} $|$ \emph{PHP, MySQL}}{}
+          \resumeItemListStart
+            \resumeItem{Automated portfolio website creation using backend templates}
+            \resumeItem{Built admin panel for content management}
+          \resumeItemListEnd 
+          
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Technocrats Institute of Technology}{2021 -- 2025}
+      {Bachelor of Technology in Computer Science Engineering}{Bhopal, India}
+    \resumeSubheading
+      {Oxford Higher Secondary School}{2021}
+      {Senior Secondary (12th) - Physics, Chemistry, Mathematics}{Sehore, India}
+    \resumeSubheading
+      {Oxford Higher Secondary School}{2019}
+      {Secondary (10th)}{Sehore, India}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+            \textbullet\ Microsoft Certified: Azure AI Fundamentals [Capgemini] \\
+            \textbullet\ Introduction to Generative AI \\
+            \textbullet\ Introduction to Large Language Models \\
+            \textbullet\ Responsive AI \\
+            \textbullet\ Ocean L1 Grade A4 [Capgemini]
+        }}
+    \end{itemize}
+
+\end{document}
