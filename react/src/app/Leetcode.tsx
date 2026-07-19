@@ -1,3 +1,5 @@
+'use client';
+
 import { UserProfileDetails } from "react-leetcode";
 import * as React from 'react';
 export default function Leetcode() {
